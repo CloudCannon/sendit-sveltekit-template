@@ -1,0 +1,28 @@
+{
+	"name": "sendit-sveltekit-template",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint": "eslint ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "^1.0.0-next.48",
+		"@sveltejs/kit": "next",
+		"eslint": "^8.16.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"svelte": "^3.44.0",
+		"vite": "^3.1.0"
+	},
+	"type": "module",
+	"dependencies": {
+		"@bookshop/browser": "3.3.0",
+		"@bookshop/generate": "3.3.0",
+		"@bookshop/svelte-engine": "3.3.0",
+		"@bookshop/sveltekit-bookshop": "/Users/nathankennedy/dev/work/packages/bookshop/javascript-modules/generator-plugins/sveltekit/sveltekit-bookshop",
+		"@cloudcannon/filer": "^0.0.1",
+		"markdown-it": "^13.0.1"
+	}
+}
