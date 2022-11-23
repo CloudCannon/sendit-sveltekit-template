@@ -2,6 +2,10 @@
 	"name": "sendit-sveltekit-template",
 	"version": "0.0.1",
 	"private": true,
+	"engines": {
+		"npm": ">=8.0.0",
+		"node": ">=16.11.0"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
