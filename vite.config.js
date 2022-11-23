@@ -6,6 +6,8 @@ const config = {
     resolve: {
         alias: {
             $bookshop: resolve('./component-library/'),
+            '@content': resolve('./content/'),
+            '@data': resolve('./data/'),
         }
     },
     server: {
