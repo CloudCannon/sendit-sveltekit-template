@@ -6,12 +6,60 @@
 <section class="pricing-inner @@bg-color">
 	<div class="container">
 		<div class="row">
-		<div class="col-lg-8 mx-auto">
-			<div class="section-header position-relative text-center">
-				<h2>{title}</h2>
-				<!-- <p>{description | markdownify}</p> -->
+			<div class="col-lg-8 mx-auto">
+				<div class="section-header position-relative text-center">
+					<h2>{title}</h2>
+					<p>
+						<!-- maybe no <p> -->
+						<!-- {description | markdownify} -->
+					</p>
+				</div>
 			</div>
-		</div>
 		</div>
 	</div>
 </section>
+
+<style lang="scss">
+	.pricing-inner {
+		position: relative;
+		padding: $base-padding * 14 $base-padding * 0 $base-padding * 27;
+		@include media-breakpoint-down-xxl {
+			padding: $base-padding * 10 $base-padding * 0 $base-padding * 27;
+		}
+		@include media-breakpoint-down-lg {
+			padding: $base-padding * 10 $base-padding * 0 $base-padding * 25;
+		}
+		@include media-breakpoint-down-md {
+			padding: $base-padding * 10 $base-padding * 0 $base-padding * 27;
+		}
+		@include media-breakpoint-down-sm {
+			padding: $base-padding * 8.5 $base-padding * 0 $base-padding * 27;
+		}
+		.section-header {
+			padding: 0 0 $base-padding * 1;
+			h2 {
+				font-size: $base-font-size * 4;
+				line-height: 80px;
+				margin-bottom: $base-margin * 1.5;
+				@include media-breakpoint-down-xl {
+					font-size: $base-font-size * 3.9;
+				}
+				@include media-breakpoint-down-lg {
+					font-size: $base-font-size * 3.5;
+					line-height: 70px;
+				}
+				@include media-breakpoint-down-md {
+					font-size: $base-font-size * 3;
+					line-height: 60px;
+				}
+				@include media-breakpoint-down-sm {
+					font-size: $base-font-size * 2.5;
+					line-height: 50px;
+				}
+			}
+			p {
+				font-size: $base-font-size * 1.35;
+			}
+		}
+	}
+</style>

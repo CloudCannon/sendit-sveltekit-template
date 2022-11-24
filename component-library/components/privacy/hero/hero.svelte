@@ -1,0 +1,37 @@
+<script>
+	export let title = ''
+</script>
+
+<section class="privacy-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="privacy-hero-content text-center">
+					<h1>{title}</h1>
+			 	</div>
+			</div>
+		</div>
+	</div>
+ </section>
+
+ <style lang="scss">
+	.privacy-hero {
+		background: #f7f8fa;
+		padding: $base-padding * 13.5 0 $base-padding * 37;
+		@include media-breakpoint-down-xxl {
+			padding: $base-padding * 12 0 $base-padding * 37;
+		}
+		@include media-breakpoint-down-sm {
+			padding: $base-padding * 10 0 $base-padding * 37;
+		}
+		&-content {
+			h1 {
+				font-size: $base-font-size * 4;
+				margin-bottom: $base-margin * 1.5;
+				@include media-breakpoint-down-md {
+					font-size: $base-font-size * 2.5;
+				}
+			}
+		}
+	}
+</style>

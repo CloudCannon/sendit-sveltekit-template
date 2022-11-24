@@ -2,16 +2,14 @@
 spec:
   structures:
     - content_blocks
-  label: Home Video
-  description: Home Video section
-  icon: "videocam"
-  tags: []
+  label: Hero
+  description: Hero section
+  icon: "lock"
+  tags: ["hero"]
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  image: "/images/video/video-thum.jpg"
-  image_alt: Thumbnail for video
-  video_url: "https://vimeo.com/45830194"
+  title: Terms & Condition
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:

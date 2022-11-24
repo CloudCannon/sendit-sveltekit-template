@@ -2,76 +2,99 @@
 	export let title = '';
 	export let title_suffix = '';
 	export let description = '';
-	export let faq = [];
+	export let FAQ = [];
 </script>
 
 <section class="faq-two">
 	<div class="container">
-	  <div class="row">
-		<div class="col-lg-8 mx-auto">
-		  <div class="section-header">
-			<h2>{title} <span>{title_suffix}</span></h2>
-			<!-- <p>{description | markdownify}</p> -->
+		<div class="row">
+		  <div class="col-lg-8 mx-auto">
+			 <div class="section-header">
+				<h2>{title} <span>{title_suffix}</span></h2>
+				<!-- <p>{description | markdownify}</p> -->
+			 </div>
 		  </div>
 		</div>
-	  </div>
-	  <div class="row">
-		<div class="col-lg-12">
-		  <div class="accordion" id="accordionExample">
-			{#each faq as item, index }
-			{#if index === 0}
-			<div class="accordion-item shows">
-			  <span>0{index+1}</span>
-			  <h2 class="accordion-header" id="headingOne">
-				<button
-				  class="accordion-button"
-				  type="button"
-				  data-bs-toggle="collapse"
-				  data-bs-target="#collapseOne"
-				  aria-expanded="true"
-				  aria-controls="collapseOne"
-				  onclick="accordionBorder()"
-				>
-				  <p class="header-content">{item.title}</p>
-				</button>
-			  </h2>
-			  <div
-				id="collapseOne"
-				class="accordion-collapse collapse show"
-				aria-labelledby="headingOne"
-				data-bs-parent="#accordionExample"
-			  >
-				<!-- <div class="accordion-body">{item.description | markdownify}</div> -->
-			  </div>
-			</div>
-			{:else}
-			<div class="accordion-item">
-			  <span>0{index+1}</span>
-			  <h2 class="accordion-header" id="heading{index}">
-				<button
-				  class="accordion-button collapsed"
-				  type="button"
-				  data-bs-toggle="collapse"
-				  data-bs-target="#collapse{index}"
-				  aria-expanded="false"
-				  aria-controls="collapse{index}"
-				>
-				  <p class="header-content">{item.title}</p>
-				</button>
-			  </h2>
-			  <div
-				id="collapse{index}"
-				class="accordion-collapse collapse"
-				aria-labelledby="heading{index}"
-				data-bs-parent="#accordionExample"
-			  >
-				<!-- <div class="accordion-body">{item.description | markdownify}</div> -->
-			  </div>
-			</div>
-			{/if}
-			{/each}
+		<div class="row">
+		  <div class="col-lg-12">
+			 <div class="accordion" id="accordionExample">
+				{#each FAQ as item, i}
+					{@const index = i + 1}
+					{#if index === 1}
+						<div class="accordion-item shows">
+						<span>0{index}</span>
+						<h2 class="accordion-header" id="headingOne">
+							<button
+								class="accordion-button"
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target="#collapseOne"
+								aria-expanded="true"
+								aria-controls="collapseOne"
+								onclick="accordionBorder()"
+							>
+								<p class="header-content">{item.title}</p>
+							</button>
+						</h2>
+						<div
+							id="collapseOne"
+							class="accordion-collapse collapse show"
+							aria-labelledby="headingOne"
+							data-bs-parent="#accordionExample"
+						>
+							<!-- <div class="accordion-body">{item.description | markdownify}</div> -->
+						</div>
+						</div>
+					{:else}
+						<div class="accordion-item">
+							<span>0{index}</span>
+							<h2 class="accordion-header" id="heading{index}">
+							<button
+								class="accordion-button collapsed"
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target="#collapse{index}"
+								aria-expanded="false"
+								aria-controls="collapse{index}"
+							>
+								<p class="header-content">{item.title}</p>
+							</button>
+							</h2>
+							<div
+							id="collapse{index}"
+							class="accordion-collapse collapse"
+							aria-labelledby="heading{index}"
+							data-bs-parent="#accordionExample"
+							>
+							<!-- <div class="accordion-body">{item.description | markdownify}</div> -->
+							</div>
+						</div>
+					{/if}
+				{/each}
+			 </div>
 		  </div>
 		</div>
-	  </div>
 	</div>
-  </section>
+ </section>
+
+ <style lang="scss">
+	.faq-two {
+		padding-bottom: $base-padding * 9.4;
+		background: $color-gray-dark;
+		@include media-breakpoint-down-xl {
+			padding-bottom: $base-padding * 5;
+		}
+		@include media-breakpoint-down-md {
+			padding-bottom: $base-padding * 3;
+		}
+		.section-header {
+			padding-bottom: $base-padding * 4.4;
+			@include media-breakpoint-down-sm {
+				padding-bottom: $base-padding * 3;
+			}
+		}
+		.shows {
+			border: 1px solid $color-anchor;
+		}
+	}
+</style>
