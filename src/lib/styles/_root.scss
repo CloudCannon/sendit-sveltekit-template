@@ -1,5 +1,5 @@
-/********** 
- 1. Default  Styles 
+/**********
+ 1. Default  Styles
 **********/
 @use "sass:math";
 /*Font */
@@ -16,6 +16,25 @@ body {
     background: $color-white;
   }
 }
+
+.sticky-nav {
+  padding: $base-padding $base-padding * 2 !important;
+  background: $color-white;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+@include media-breakpoint-down-lg {
+  .sticky-nav {
+    padding: $base-padding * 1.5 !important;
+  }
+}
+@include media-breakpoint-down-sm {
+  .sticky-nav {
+    padding: $base-padding * 1 $base-padding * 0 !important;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -85,8 +104,8 @@ a {
 .next-blog {
   display: none;
 }
-/********** 
-  15. Custom Styles 
+/**********
+  15. Custom Styles
 **********/
 
 /* Privacy Page */
