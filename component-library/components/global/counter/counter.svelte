@@ -1,9 +1,10 @@
 <script>
-export let title = '';
-export let title_suffix = ''
-export let description = ''
-export let alternateStyle = false
-export let numbers = []
+	import { markdownify } from '$lib/utility.js';
+	export let title = '';
+	export let title_suffix = ''
+	export let description = ''
+	export let alternateStyle = false
+	export let numbers = []
 </script>
 
 <section
@@ -20,7 +21,7 @@ export let numbers = []
 					<h2>
 						{title} <span>{title_suffix}</span>
 					</h2>
-					<!-- { description | markdownify} -->
+					{@html markdownify(description)}
 				</div>
 			</div>
 			<div class="col-12">

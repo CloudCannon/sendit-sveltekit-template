@@ -1,4 +1,6 @@
 <script>
+	import { markdownify } from '$lib/utility.js';
+
 	export let image = '';
 	export let image_alt = '';
 	export let title = '';
@@ -28,7 +30,7 @@
 			<div class="col-lg-6">
 				<div class="feature-item-content mb-xl-15 mb-md-10 mb-7 ps-xxl-8 ps-0">
 				<h2>{title}</h2>
-				<!-- <p>{description | markdownify}</p> -->
+				<p>{@html markdownify(description)}</p>
 				<div class="Learn-more">
 					<a href="{button.link}" class="">
 					{button.text}
@@ -44,7 +46,7 @@
 					<div class="feature-item-content mb-xl-15 mb-md-10 mb-7 ps-xxl-8 ps-0">
 					<h2 class="pe-xl-0">{title}</h2>
 					<p>
-						<!-- {description | markdownify} -->
+						{@html markdownify(description)}
 					</p>
 					<div class="Learn-more">
 						<a href="{button.link}" class="">

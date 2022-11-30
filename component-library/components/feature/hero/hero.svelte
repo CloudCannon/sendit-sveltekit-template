@@ -1,4 +1,5 @@
 <script>
+  	import { markdownify } from '$lib/utility.js';
 	export let title = '';
 	export let description = '';
 	export let button = {};
@@ -12,10 +13,7 @@
 		  <div class="col-lg-6">
 			 <div class="feature-hero-content">
 				<h1 class="">{title}</h1>
-				<p>
-					<!-- p tag -->
-					<!-- {description | markdownify} -->
-				</p>
+				<p>{@html markdownify(description)}</p>
 				<div class="d-block mb-6">
 					<a href="{button.link}" class="btn btn-primary btn-lg"> {button.text} </a>
 				</div>

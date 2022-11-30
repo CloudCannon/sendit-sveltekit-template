@@ -1,4 +1,5 @@
 <script>
+	import { markdownify } from '$lib/utility.js';
 	export let title = '';
 	export let description = '';
 	export let button = {};
@@ -11,11 +12,8 @@
 		  <div class="col-lg-6">
 			 <div class="works-content">
 				<h2>{title}</h2>
-				<p>
-					<!-- this may not need the p tags - check 11ty-->
-					<!-- {description | markdownify} -->
-				</p>
-				<a href="{button.link}" class="btn btn-lg btn-white" target="_blank"> {button.text} </a>
+				<p>{@html markdownify(description)}</p>
+				<a href="{button.link}" class="btn btn-lg btn-white" target="_blank" rel="noreferrer"> {button.text} </a>
 			 </div>
 		  </div>
 		  <div class="col-lg-6">

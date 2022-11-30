@@ -1,4 +1,6 @@
 <script>
+	import { markdownify } from '$lib/utility.js';
+
 	export let description = '';
 	export let image = '';
 	export let image_alt = '';
@@ -16,7 +18,7 @@
 			</div>
 			<img src="{image}" alt="{image_alt}" />
 			<h3 class="my-5">
-				<!-- {description | markdownify}-->
+				{@html markdownify(description)}
 			</h3>
 			<a href="/" class="btn btn-lg btn-primary"> Try Again </a>
 			</div>

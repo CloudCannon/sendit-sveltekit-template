@@ -1,6 +1,5 @@
 <script>
-  // import markdownify from '$lib/utility.js';
-
+  import { markdownify } from '$lib/utility.js';
   export let title;
   export let description;
   export let hero_images;
@@ -13,9 +12,7 @@
       <div class="col-xl-5 col-lg-10 mx-auto">
         <div class="about-hero-two-content position-relative">
           <h2>{title}</h2>
-          <p class="mb-20 w-xxl-80">
-            <!-- {@html markdownify(description)} -->
-          </p>
+          <p class="mb-20 w-xxl-80">{@html markdownify(description)}</p>
           <div class="scroll-down d-flex justify-content-center justify-content-xl-start">
             <a href="{button.link}" class="btn btn-primary btn-lg"> {button.text} </a>
           </div>

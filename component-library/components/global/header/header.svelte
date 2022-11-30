@@ -1,4 +1,6 @@
 <script>
+	import { markdownify } from '$lib/utility.js';
+
 	export let title = '';
 	export let title_suffix = '';
 	export let description = '';
@@ -12,9 +14,7 @@
 			<div class="section-header @@disply"
 				class:no-top-padding="{remove_top_padding}">
 			<h2>{title}<span>{title_suffix}</span></h2>
-			<p>
-				<!-- { description | markdownify} -->
-			</p>
+			<p>{@html markdownify(description)}</p>
 			</div>
 		</div>
 		</div>

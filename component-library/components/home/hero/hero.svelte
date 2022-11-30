@@ -1,4 +1,5 @@
 <script>
+	import { markdownify } from '$lib/utility.js';
 	export let title = '';
 	export let description = '';
 	export let image = '';
@@ -15,7 +16,7 @@
 		  <div class="col-lg-6">
 			 <div class="hero-two-content">
 				<h1 class="mb-4">{title}</h1>
-				<!-- <div class="mb-7 w-xxl-80">{description | markdownify}</div> -->
+				<div class="mb-7 w-xxl-80">{@html markdownify(description)}</div>
 				<div class="">
 					<a href="{button.url}" class="btn btn-primary btn-lg"> {button.text} </a>
 				</div>

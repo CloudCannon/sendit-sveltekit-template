@@ -1,8 +1,18 @@
 <script>
+	import { markdownify } from '$lib/utility.js';
+
 	export let title = '';
 	export let title_suffix = '';
 	export let description = '';
 	export let FAQ = [];
+
+
+	function onClick ({ target }) {
+		const accordionItem = target.closest('.accordion-item')
+		var current = document.getElementsByClassName('shows');
+		current[0].className = current[0].className.replace(' shows', '');
+		accordionItem.className += ' shows';
+	}
 </script>
 
 <section class="faq-two">
@@ -11,7 +21,7 @@
 		  <div class="col-lg-8 mx-auto">
 			 <div class="section-header">
 				<h2>{title} <span>{title_suffix}</span></h2>
-				<!-- <p>{description | markdownify}</p> -->
+				<p>{@html markdownify(description)}</p>
 			 </div>
 		  </div>
 		</div>
@@ -25,13 +35,13 @@
 						<span>0{index}</span>
 						<h2 class="accordion-header" id="headingOne">
 							<button
+								on:click={onClick}
 								class="accordion-button"
 								type="button"
 								data-bs-toggle="collapse"
 								data-bs-target="#collapseOne"
 								aria-expanded="true"
 								aria-controls="collapseOne"
-								onclick="accordionBorder()"
 							>
 								<p class="header-content">{item.title}</p>
 							</button>
@@ -42,7 +52,7 @@
 							aria-labelledby="headingOne"
 							data-bs-parent="#accordionExample"
 						>
-							<!-- <div class="accordion-body">{item.description | markdownify}</div> -->
+							<div class="accordion-body">{@html markdownify(description)}</div>
 						</div>
 						</div>
 					{:else}
@@ -50,6 +60,7 @@
 							<span>0{index}</span>
 							<h2 class="accordion-header" id="heading{index}">
 							<button
+								on:click={onClick}
 								class="accordion-button collapsed"
 								type="button"
 								data-bs-toggle="collapse"
@@ -66,7 +77,7 @@
 							aria-labelledby="heading{index}"
 							data-bs-parent="#accordionExample"
 							>
-							<!-- <div class="accordion-body">{item.description | markdownify}</div> -->
+							<div class="accordion-body">{@html markdownify(description)}</div>
 							</div>
 						</div>
 					{/if}

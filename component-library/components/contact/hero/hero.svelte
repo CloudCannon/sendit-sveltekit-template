@@ -1,4 +1,5 @@
 <script>
+  import { markdownify } from '$lib/utility.js';
 	export let title = '';
 	export let description = '';
 </script>
@@ -9,10 +10,7 @@
 		  <div class="col-lg-6">
 			 <div class="contact-hero-content">
 				<h1>{title}</h1>
-				<p>
-					<!-- p tag might not be needed -->
-					<!-- {description | markdownify} -->
-				</p>
+				<p>{@html markdownify(description)}</p>
 			 </div>
 		  </div>
 	   </div>

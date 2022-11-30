@@ -1,4 +1,6 @@
 <script>
+	import { markdownify } from '$lib/utility.js';
+
 	export let title = '';
 	export let description = '';
 </script>
@@ -9,10 +11,7 @@
 			<div class="col-lg-8 mx-auto">
 				<div class="section-header position-relative text-center">
 					<h2>{title}</h2>
-					<p>
-						<!-- maybe no <p> -->
-						<!-- {description | markdownify} -->
-					</p>
+					<p>{@html markdownify(description)}</p>
 				</div>
 			</div>
 		</div>

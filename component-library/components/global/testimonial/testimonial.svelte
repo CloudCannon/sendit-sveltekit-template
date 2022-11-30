@@ -1,4 +1,6 @@
 <script>
+	import { markdownify } from '$lib/utility.js';
+
 	export let title = '';
 	export let title_suffix = '';
 	export let description = '';
@@ -11,10 +13,7 @@
 		  <div class="col-lg-8 mx-auto text-center mb-5">
 			 <div class="testimonial-content">
 				<h2>{title} <span> {title_suffix}</span></h2>
-				<p>
-					<!-- maybe p -->
-					<!-- {description | markdownify } -->
-				</p>
+				<p>{@html markdownify(description)}</p>
 			 </div>
 		  </div>
 		</div>
