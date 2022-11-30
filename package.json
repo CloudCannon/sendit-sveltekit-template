@@ -20,15 +20,13 @@
 		"sass": "^1.56.1",
 		"svelte": "^3.44.0",
 		"svelte-preprocess": "^4.10.7",
-		"vite": "^3.1.0"
-	},
-	"type": "module",
-	"dependencies": {
-		"@bookshop/browser": "3.3.0",
-		"@bookshop/generate": "3.3.0",
-		"@bookshop/svelte-engine": "3.3.0",
-		"@bookshop/sveltekit-bookshop": "/Users/nathankennedy/dev/work/packages/bookshop/javascript-modules/generator-plugins/sveltekit/sveltekit-bookshop",
+		"vite": "^3.1.0",
+		"@bookshop/browser": "3.3.1",
+		"@bookshop/generate": "3.3.1",
+		"@bookshop/svelte-engine": "3.3.1",
+		"@bookshop/sveltekit-bookshop": "3.3.1",
 		"@cloudcannon/filer": "^0.0.1",
 		"markdown-it": "^13.0.1"
-	}
+	},
+	"type": "module"
 }
