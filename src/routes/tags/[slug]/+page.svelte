@@ -1,10 +1,11 @@
 <script>
    export let data;
 
+   const toTitleCase = ((text) => `${text.charAt(0).toUpperCase() + text.substr(1).toLowerCase()}`);
+
    const pageDetails = data.pageDetails;
    const tag = data.tag;
    const posts = data.posts;
-   const description = '';
 </script>
 
 <main>
@@ -13,7 +14,7 @@
          <div class="row">
             <div class="col-xl-8 col-lg-10 mx-auto">
                <div class="blog-hero-content">
-                  <h1 class="blog-hero-title">{tag}</h1> <!-- need to convert this to title case (title -> Title)-->
+                  <h1 class="blog-hero-title">{toTitleCase(tag)}</h1>
                   <p>{pageDetails.data.description}</p>
                </div>
             </div>
