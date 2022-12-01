@@ -25,7 +25,7 @@
 		<div class="container">
 			<div class="row">
 				{#each posts as post}
-				{@const firstTwoTags = post.data.tags.slice(1)}
+				{@const firstTwoTags = post.data.tags.slice(0, 2)}
 				<div class="col-lg-4 col-md-6">
 					<article class="blog-post">
 						<div class="blog-post-thumb">
@@ -36,7 +36,7 @@
 						<div class="blog-post-content">
 							<div class="blog-post-tag @@category">
 								{#each firstTwoTags as tag}
-									<a href="/tags/{tag}/">{tag}</a>
+									<a href="/tags/{tag}/" target="-self">{tag}</a>
 								{/each}
 							</div>
 							<div class="blog-post-title">
