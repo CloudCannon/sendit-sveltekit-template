@@ -12,18 +12,14 @@ export async function load({ params }) {
 		path: 'content'
 	});
 
-	const posts = await filer.getItems('blog', { sortKey: 'date' });
-	const postsByTag = posts.reduce((memo, post) => {
-		const tags = post.data.tags || [];
-		if (tags.includes(tag)) {
-			memo.push(post);
-		}
-		return memo;
-	}, []);
+	const posts = await filer.getItems('blog', {
+		sortKey: 'date',
+		filter: (item) => item.data.tags.includes(tag)
+	});
 
 	return {
 		tag: tag,
 		pageDetails: pageDetails,
-		posts: postsByTag
+		posts
 	};
 }
