@@ -1,14 +1,17 @@
 import Filer from '@cloudcannon/filer';
+import { get } from '$lib/routing';
 
 export async function load() {
-	const contentFile = 'blog.md';
+	const slug = 'blog';
+	const res = await get(slug);
+	const pageDetails = res.data;
+
 	const pageNumber = 1;
 
 	const filer = new Filer({
 		path: 'content'
 	});
 
-	const pageDetails = await filer.getItem(contentFile, { sortKey: 'date' });
 	const paginationDetails = filer.getPaginatedItems('blog', {
 		sortKey: 'date',
 		pagination: {
@@ -21,4 +24,5 @@ export async function load() {
 		pageDetails,
 		paginationDetails
 	};
+
 }

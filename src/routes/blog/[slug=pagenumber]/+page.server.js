@@ -1,18 +1,26 @@
+import { redirect } from '@sveltejs/kit';
 import Filer from '@cloudcannon/filer';
+import { get } from '$lib/routing';
 
 export async function load({ params }) {
-	const contentFile = `blog.md`;
+	const page = parseInt(params.slug);
+	if (page === 1) {
+		throw redirect(307, '/blog/');
+	}
+
+	const filename = 'blog';
+	const res = await get(filename);
+	const pageDetails = res.data;
+
 
 	const filer = new Filer({
 		path: 'content'
 	});
 
-	const pageDetails = await filer.getItem(contentFile, { sortKey: 'date' });
-
 	const paginationDetails = filer.getPaginatedItems('blog', {
 		sortKey: 'date',
 		pagination: {
-			page: parseInt(params.slug),
+			page,
 			size: pageDetails.data.pagination.size
 		}
 	})

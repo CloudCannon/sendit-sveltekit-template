@@ -1,15 +1,8 @@
-import Filer from '@cloudcannon/filer';
+import { get } from '$lib/routing';
 export const prerender = true
 export const trailingSlash = 'always';
 
 export async function load() {
-	const contentFile = 'index.md';
-
-	const filer = new Filer({
-		path: 'content'
-	});
-
-	const data = await filer.getItem(contentFile, {});
-
-	return data;
+	const res = await get('index');
+	return res.data;
 }

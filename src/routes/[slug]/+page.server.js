@@ -1,22 +1,12 @@
 import { error } from '@sveltejs/kit';
-import Filer from '@cloudcannon/filer';
-export const prerender = true
-export const trailingSlash = 'always';
+import { get } from '$lib/routing';
 
 export async function load({ params }) {
 	const slug = params.slug || 'index';
-	const contentFile = `${slug}.md`
+	const res = await get(slug);
 
-	const filer = new Filer({
-		path: 'content'
-	});
-
-	let data = {};
-	try {
-		data = await filer.getItem(contentFile, {})
-	} catch(e) {
-		throw error(404, 'Not found');
+	if (res.status === 200) {
+		return res.data;
 	}
-
-	return data;
+	throw error(res.status, 'Not found');
 }
