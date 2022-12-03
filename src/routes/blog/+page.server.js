@@ -12,13 +12,14 @@ export async function load() {
 		path: 'content'
 	});
 
-	const paginationDetails = filer.getPaginatedItems('blog', {
+	const paginationDetails = await filer.getPaginatedItems('blog', {
 		sortKey: 'date',
 		pagination: {
 			page: pageNumber,
 			size: pageDetails.data.pagination.size
 		}
 	});
+	paginationDetails.urlPrefix = 'blog'
 
 	return {
 		pageDetails,
