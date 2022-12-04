@@ -6,3 +6,9 @@ export function markdownify(content) {
 	const contentHtml = md.renderInline(content);
 	return contentHtml;
 }
+
+export function toTitleCase(text) {
+	return  text
+		? `${text.charAt(0).toUpperCase() + text.substr(1).toLowerCase()}`
+		: '';
+}

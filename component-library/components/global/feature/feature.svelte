@@ -1,5 +1,5 @@
 <script>
-	import { markdownify } from '$lib/utility.js';
+	import { markdownify } from '$lib/string-utils';
 
 	export let image = '';
 	export let image_alt = '';

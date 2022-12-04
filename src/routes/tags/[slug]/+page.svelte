@@ -1,5 +1,6 @@
 <script>
 	import BlogLayout from "../../BlogLayout.svelte";
+	import { toTitleCase } from "$lib/string-utils";
 
 	export let data;
 	const tag = data.tag;
@@ -9,7 +10,6 @@
 
 	const description = pageDetails.data.description;
 
-	const toTitleCase = ((text) => `${text.charAt(0).toUpperCase() + text.substr(1).toLowerCase()}`);
 	const title = toTitleCase(tag);
 </script>
 
