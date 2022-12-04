@@ -1,4 +1,4 @@
-/********** 
+/**********
   13. Pricing Page and Section Styles
 **********/
 .pricing,
@@ -161,8 +161,8 @@
             font-size: $base-font-size * 1.25;
           }
         }
-        .deactive {
-          color: $color-deactive;
+        .inactive {
+          color: $color-inactive;
         }
       }
     }
@@ -432,7 +432,7 @@
                   padding: 30px 0 20px;
                 }
               }
-              .deactive {
+              .inactive {
                 color: $color-secondary-light;
               }
             }

@@ -20,31 +20,3 @@
 		</div>
 	</div>
 </section>
-
-<style lang="scss">
-	.feature {
-		position: relative;
-		overflow: hidden;
-		.section-header {
-			padding-bottom: $base-padding * 10;
-
-			@include media-breakpoint-down-xxl {
-				padding-bottom: $base-padding * 7;
-			}
-			@include media-breakpoint-down-sm {
-				padding: $base-padding * 3.2 0 $base-padding * 3.5;
-			}
-			p {
-				width: 72%;
-				margin: 0 auto;
-				@include media-breakpoint-down-xl {
-					width: 90%;
-				}
-			}
-		}
-
-		.no-top-padding {
-			padding-top: 0;
-		}
-	}
-</style>

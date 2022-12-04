@@ -11,9 +11,28 @@ PROJECT:	JACKCREATIVE
 
 ===================== */
 
+@import "$vendor/bootstrap/bootstrap.min.css";
 @import "globals";
 @import "root";
 @import "buttons";
 @import "container";
 @import "spacer";
+@import "components/navbar";
+@import "components/hero";
+@import "components/about";
+@import "components/feature";
+@import "components/access";
+@import "components/team";
+@import "components/testimonial";
+@import "components/gallery";
+@import "components/works";
+@import "components/pricing";
+@import "components/cta";
+@import "components/footer";
 @import "components/blog";
+@import "components/services";
+@import "components/video";
+@import "components/faq";
+@import "components/contact-form";
+@import "components/sing-up";
+@import "components/counter-up";

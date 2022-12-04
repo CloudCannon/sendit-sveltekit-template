@@ -26,20 +26,3 @@
 		</div>
 	</div>
 </section>
-
-<style lang="scss">
-	.error {
-		position: relative;
-		background: $color-secondary;
-		&-content {
-			 position: relative;
-			 h3 {
-				color: $color-header;
-				font-weight: $bold-font-weight;
-			 }
-			 img {
-				max-width: 100%;
-			 }
-		}
-	}
-</style>
