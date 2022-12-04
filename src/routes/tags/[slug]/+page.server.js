@@ -20,7 +20,7 @@ export async function load({ params }) {
 			page: 1
 		}
 	});
-	paginationDetails.urlPrefix = `tags/${tag}`
+	paginationDetails.urlPrefix = `tags/${tag}`;
 
 	return {
 		tag,

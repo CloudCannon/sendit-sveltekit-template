@@ -1,9 +1,9 @@
 <script>
 	import '$lib/styles/theme.scss';
 	import Nav from './Nav.svelte';
-    import Footer from './Footer.svelte';
+	import Footer from './Footer.svelte';
 </script>
 
 <Nav />
-<slot></slot>
+<slot/>
 <Footer />

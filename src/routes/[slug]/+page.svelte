@@ -3,12 +3,12 @@
 	import {
 		Bookshop,
 		trackBookshopLiveData
-	 } from "@bookshop/sveltekit-bookshop";
+	} from "@bookshop/sveltekit-bookshop";
 	import {
 		onCloudCannonChanges,
 		stopCloudCannonChanges,
 	} from "@cloudcannon/svelte-connector";
-	import { site_title } from '@data/site.json'
+	import { site_title } from '@data/site.json';
 
 	export let data;
 

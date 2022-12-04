@@ -15,13 +15,12 @@
 					>
 						{#each terms_and_conditions as item, i}
 							{@const index = i + 1}
-
 							<div class="privacy-items" id="item{index}">
 								<div class="card">
-								<h3 class="sub-title">{item.heading}</h3>
-								<div class="card-body">
-									<div class="card-text">{item.description}</div>
-								</div>
+									<h3 class="sub-title">{item.heading}</h3>
+									<div class="card-body">
+										<div class="card-text">{item.description}</div>
+									</div>
 								</div>
 							</div>
 						{/each}
@@ -40,9 +39,9 @@
 									</li>
 								{:else}
 									<li class="nav-item">
-									<a class="nav-link" href="#item{index}">
-										{item.heading}</a
-									>
+										<a class="nav-link" href="#item{index}">
+											{item.heading}</a
+										>
 									</li>
 								{/if}
 							{/each}

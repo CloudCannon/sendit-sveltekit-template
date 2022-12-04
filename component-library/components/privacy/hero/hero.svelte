@@ -1,5 +1,5 @@
 <script>
-	export let title = ''
+	export let title = '';
 </script>
 
 <section class="privacy-hero">
@@ -8,8 +8,8 @@
 			<div class="col-md-12">
 				<div class="privacy-hero-content text-center">
 					<h1>{title}</h1>
-			 	</div>
+				</div>
 			</div>
 		</div>
 	</div>
- </section>
+</section>

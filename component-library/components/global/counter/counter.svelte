@@ -21,26 +21,26 @@
 					<h2>
 						{title} <span>{title_suffix}</span>
 					</h2>
-					{@html markdownify(description)}
+					<p>{@html markdownify(description)}</p>
 				</div>
 			</div>
 			<div class="col-12">
 				<div class="counter-up-wrapper d-grid">
 					{#each numbers as item}
-					<div class="counter-up-content">
-						<div class="counter-up-content-item">
-							<div class="counter-percent">
-								{#if item.prefix}
-								<span class="percent">{item.prefix}</span>
-								{/if}
-								<span class="counter">{item.number}</span>
-								{#if item.suffix}
-								<span class="percent">{item.suffix}</span>
-								{/if}
+						<div class="counter-up-content">
+							<div class="counter-up-content-item">
+								<div class="counter-percent">
+									{#if item.prefix}
+										<span class="percent">{item.prefix}</span>
+									{/if}
+										<span class="counter">{item.number}</span>
+									{#if item.suffix}
+										<span class="percent">{item.suffix}</span>
+									{/if}
+								</div>
+								<p>{item.text}</p>
 							</div>
-							<p>{item.text}</p>
 						</div>
-					</div>
 					{/each}
 				</div>
 			</div>

@@ -1,5 +1,5 @@
 <script>
-    import BlogLayout from "../BlogLayout.svelte";
+	import BlogLayout from "../BlogLayout.svelte";
 
 	export let data;
 
