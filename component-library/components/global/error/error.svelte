@@ -18,7 +18,7 @@
 					</div>
 					<img src="{image}" alt="{image_alt}" />
 					<h3 class="my-5">
-						{@html markdownify(description)}
+						<p>{@html markdownify(description)}</p>
 					</h3>
 					<a href="/" class="btn btn-lg btn-primary"> Try Again </a>
 				</div>

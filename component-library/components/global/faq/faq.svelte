@@ -52,7 +52,9 @@
 									aria-labelledby="headingOne"
 									data-bs-parent="#accordionExample"
 								>
-									<div class="accordion-body">{@html markdownify(description)}</div>
+									<div class="accordion-body">
+										<p>{@html markdownify(description)}</p>
+									</div>
 								</div>
 							</div>
 						{:else}
@@ -77,7 +79,9 @@
 									aria-labelledby="heading{index}"
 									data-bs-parent="#accordionExample"
 									>
-									<div class="accordion-body">{@html markdownify(description)}</div>
+									<div class="accordion-body">
+										<p>{@html markdownify(description)}</p>
+									</div>
 								</div>
 							</div>
 						{/if}
