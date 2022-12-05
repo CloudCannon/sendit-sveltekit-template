@@ -9,12 +9,12 @@
 		stopCloudCannonChanges,
 	} from "@cloudcannon/svelte-connector";
 	import { site_title } from '@data/site.json';
+	import { formatTitle } from '$lib/string-utils';
 
 	export let data;
-
 	let pageDetails = data.data;
 
-	let title = `${site_title}${pageDetails.title ? ` | ${pageDetails.title}` : ''}`;
+	const title = formatTitle(site_title, pageDetails.title)
 
 	onMount(async () => {
 		onCloudCannonChanges(

@@ -1,11 +1,19 @@
 <script>
 	import PaginationControls from "./PaginationControls.svelte";
+	import { site_title } from '@data/site.json';
+	import { formatTitle } from '$lib/string-utils';
 
 	export let title = '';
 	export let description = '';
 	export let pagination = {};
 	export let posts = [];
+
+	const fullTitle = formatTitle(site_title, title);
 </script>
+
+<svelte:head>
+	<title>{fullTitle}</title>
+</svelte:head>
 
 <section class="blog-hero pt-xl-22 pt-sm-20 pt-18 pb-xxl-25 pb-xl-23 pb-22 position-relative">
 	<div class="container">

@@ -1,11 +1,19 @@
 <script>
+	import { site_title } from '@data/site.json';
+	import { formatTitle } from '$lib/string-utils';
+
 	export let data;
 	const recommendedPosts = data.recommendedPosts;
 	const pageDetails = data.pageDetails;
-
 	const content = pageDetails.content_html;
 	const frontMatter = pageDetails.data;
+
+	const title = formatTitle(site_title, frontMatter.title);
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+</svelte:head>
 
 <main>
 	<section class="blog-details">
