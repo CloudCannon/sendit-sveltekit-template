@@ -2,6 +2,7 @@
 	import * as nav from '@data/nav.json';
 	import { page } from '$app/stores';
 
+	const currentPath = $page.url.pathname;
 </script>
 
 <header>
@@ -90,11 +91,10 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mx-auto mb-20 mb-lg-0">
 					{#each nav.items as item}
-						{@const url = item.link === "/" ? item.link : `${item.link}/`}
 						<li class="nav-item">
 							<a
 							class="nav-link"
-							class:active="{page.path === url}"
+							class:active="{currentPath === item.link}"
 							href="{ item.link }"
 							target="_self"
 							>{ item.text }</a
