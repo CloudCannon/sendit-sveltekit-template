@@ -9,7 +9,7 @@
 		stopCloudCannonChanges,
 	} from "@cloudcannon/svelte-connector";
 	import { site_title } from '@data/site.json';
-	import { formatTitle } from '$lib/string-utils';
+	import { formatTitle } from '$lib/utils/string';
 
 	export let data;
 	let pageDetails = data.data;

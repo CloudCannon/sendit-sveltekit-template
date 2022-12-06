@@ -1,7 +1,7 @@
 <script>
 	import PaginationControls from "./PaginationControls.svelte";
 	import { site_title } from '@data/site.json';
-	import { formatTitle } from '$lib/string-utils';
+	import { formatTitle } from '$lib/utils/string';
 
 	export let title = '';
 	export let description = '';

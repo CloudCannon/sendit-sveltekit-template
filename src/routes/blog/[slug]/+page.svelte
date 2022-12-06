@@ -1,6 +1,7 @@
 <script>
 	import { site_title } from '@data/site.json';
-	import { formatTitle } from '$lib/string-utils';
+	import { formatTitle } from '$lib/utils/string';
+	import { getContentMeta } from '$lib/utils/markdown';
 
 	export let data;
 	const recommendedPosts = data.recommendedPosts;
@@ -9,6 +10,13 @@
 	const frontMatter = pageDetails.data;
 
 	const title = formatTitle(site_title, frontMatter.title);
+	const date = frontMatter.date || new Date();
+	const dateString = date.toLocaleString('en-us', {
+		month: 'long',
+		day: 'numeric',
+		year: 'numeric'
+	})
+	const { readTime, wordCount } = getContentMeta(content);
 </script>
 
 <svelte:head>
@@ -26,17 +34,17 @@
 					 <div class="inner-blog-details-meta">
 						<ul class="list-unstyled">
 							<li class="list-inline-item">
-								<p>{frontMatter.date}</p><!-- need formatting here-->
+								<p>{dateString}</p>
 							</li>
 							<li class="list-inline-item">
 								<p><span> Written by:</span> {frontMatter.author}</p>
 							</li>
 							<li class="list-inline-item">
-								<!-- <p>{content | emojiReadTime }</p> -->
+								<p>{readTime} <span>minutes</span></p>
 							</li>
 							{#if content !== ""}
 								<li class="list-inline-item">
-								 <!-- <p>{ content | wordCount }<span> words</span></p> -->
+								 <p>{ wordCount } <span>words</span></p>
 								</li>
 							{/if}
 						</ul>
