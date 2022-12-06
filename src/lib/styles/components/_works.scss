@@ -69,8 +69,8 @@
       }
 
       .effect {
-         -webkit-mask-image: url(/images/works/effect.png);
-         mask-image: url(/images/works/effect.png);
+         -webkit-mask-image: url(/static/images/works/effect.png);
+         mask-image: url(/static/images/works/effect.png);
          background: $color-background-effects;
          position: absolute;
          top: -96px;

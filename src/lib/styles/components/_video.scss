@@ -38,8 +38,8 @@
       }
 
       .effect-one {
-         -webkit-mask-image: url(/images/video/effect-one.png);
-         mask-image: url(/images/video/effect-one.png);
+         -webkit-mask-image: url(/static/images/video/effect-one.png);
+         mask-image: url(/static/images/video/effect-one.png);
          background: $color-background-effects;
          position: absolute;
          top: 54%;
@@ -62,8 +62,8 @@
       }
 
       .effect-two {
-         -webkit-mask-image: url(/images/video/effect-two.png);
-         mask-image: url(/images/video/effect-two.png);
+         -webkit-mask-image: url(/static/images/video/effect-two.png);
+         mask-image: url(/static/images/video/effect-two.png);
          background: $color-background-effects;
          position: absolute;
          top: -96px;

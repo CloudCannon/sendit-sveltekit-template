@@ -1,4 +1,4 @@
-/********** 
+/**********
   9. Feature Page nd Section Styles
 **********/
 .feature,
@@ -57,8 +57,8 @@
     }
 
     .effect-one {
-      -webkit-mask-image: url(/images/feature/effect-1.png);
-      mask-image: url(/images/feature/effect-1.png);
+      -webkit-mask-image: url(/static/images/feature/effect-1.png);
+      mask-image: url(/static/images/feature/effect-1.png);
       background: $color-background-effects;
       left: -11%;
       width: 110%;
@@ -72,8 +72,8 @@
     }
 
     .effect-two {
-      -webkit-mask-image: url(/images/feature/effect-2.png);
-      mask-image: url(/images/feature/effect-2.png);
+      -webkit-mask-image: url(/static/images/feature/effect-2.png);
+      mask-image: url(/static/images/feature/effect-2.png);
       background: $color-background-effects;
       width: 132%;
       height: 130%;
@@ -142,7 +142,7 @@
     }
   }
 
-  /********** 
+  /**********
   start feature-hero + feature-hero-two section
   **********/
 
@@ -225,8 +225,8 @@
       }
 
       .shape {
-        -webkit-mask-image: url(/images/feature/effect-4.png);
-        mask-image: url(/images/feature/effect-4.png);
+        -webkit-mask-image: url(/static/images/feature/effect-4.png);
+        mask-image: url(/static/images/feature/effect-4.png);
         background: $color-background-effects;
         position: absolute;
         top: 2%;
@@ -282,7 +282,7 @@
     }
   }
 
-  /********** 
+  /**********
   start-feature-two section
   **********/
   &-two,
@@ -422,7 +422,7 @@
     }
   }
 
-  /********** 
+  /**********
   start-feature-three section
   **********/
   &-three {
