@@ -3,7 +3,7 @@ import Filer from '@cloudcannon/filer';
 import { get } from '$lib/routing';
 
 export async function load({ params }) {
-	const tag = params.slug;
+	const tag = params.tag;
 	let page;
 	if (params.pagenumber) {
 		page = parseInt(params.pagenumber);
