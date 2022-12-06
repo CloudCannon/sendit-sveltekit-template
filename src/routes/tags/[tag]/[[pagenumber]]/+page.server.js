@@ -4,6 +4,10 @@ import { get } from '$lib/routing';
 
 export async function load({ params }) {
 	const tag = params.tag;
+	if (!tag) {
+		throw redirect(301, '/blog/');
+	}
+
 	let page;
 	if (params.pagenumber) {
 		page = parseInt(params.pagenumber);
