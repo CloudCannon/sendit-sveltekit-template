@@ -1,5 +1,5 @@
 module.exports = {
 	engines: {
-		"@bookshop/svelte-engine": {}
+		'@bookshop/svelte-engine': {}
 	}
-}
+};

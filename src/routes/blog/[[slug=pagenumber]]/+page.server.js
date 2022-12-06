@@ -27,8 +27,8 @@ export async function load({ params }) {
 			page,
 			size: pageDetails.data.pagination.size
 		}
-	})
-	paginationDetails.urlPrefix = 'blog'
+	});
+	paginationDetails.urlPrefix = 'blog';
 
 	return {
 		pageDetails,

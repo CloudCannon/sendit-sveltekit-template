@@ -32,8 +32,8 @@ export async function load({ params }) {
 			page,
 			size: pageDetails.data.pagination.size
 		}
-	})
-	paginationDetails.urlPrefix = `tags/${tag}`
+	});
+	paginationDetails.urlPrefix = `tags/${tag}`;
 
 	return {
 		tag,

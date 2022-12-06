@@ -1,7 +1,5 @@
 import Filer from '@cloudcannon/filer';
 import { get } from '$lib/routing';
-export const prerender = true
-export const trailingSlash = 'always';
 
 export async function load({ params }) {
 	const filename = `blog/${params.slug}`;

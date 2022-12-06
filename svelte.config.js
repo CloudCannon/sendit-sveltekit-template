@@ -10,7 +10,7 @@ const config = {
 	},
 	preprocess: preprocess({
 		scss: {
-			prependData: `@import './src/lib/styles/globals.scss';`
+			prependData: '@import "./src/lib/styles/globals.scss";'
 		}
 	})
 };
