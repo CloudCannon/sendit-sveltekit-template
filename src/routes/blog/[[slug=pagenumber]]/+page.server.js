@@ -3,10 +3,14 @@ import Filer from '@cloudcannon/filer';
 import { get } from '$lib/routing';
 
 export async function load({ params }) {
-	const page = parseInt(params.slug);
-	if (page === 1) {
-		throw redirect(307, '/blog/');
+	let page;
+	if (params.slug) {
+		page = parseInt(params.slug);
+		if (page === 1) {
+			throw redirect(307, '/blog/');
+		}
 	}
+	page = page || 1;
 
 	const filename = 'blog';
 	const res = await get(filename);
