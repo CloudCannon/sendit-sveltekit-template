@@ -1,5 +1,5 @@
 <script>
-	import { markdownify } from '$lib/string-utils';
+	import { markdownify } from '$lib/utils/markdown';
 	export let title = '';
 	export let description = '';
 </script>
