@@ -11,7 +11,7 @@
 		"prebuild": "run-s prebuild:*",
 		"prebuild:fetch-theme-color": "node fetch-theme-color.js",
 		"dev": "npm run prebuild && vite dev",
-		"build": "npm run prebuild && vite build",
+		"build": "vite build",
 		"preview": "vite preview",
 		"lint": "eslint ."
 	},
