@@ -1,4 +1,4 @@
-/********** 
+/**********
  16. Blog Page and Section Styles
 **********/
 .blog {
@@ -73,6 +73,10 @@
             font-weight: 500;
             margin-bottom: $base-margin * 0.9;
             font-family: $font-primary;
+
+			&:not(:last-child) {
+				margin-right: $base-margin * 0.3;
+			}
          }
       }
       &-title {
