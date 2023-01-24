@@ -19,7 +19,7 @@ content_blocks:
           when this occurs, but you are responsible for staying up-to-date with these changes.</p>
       - heading: Account Information & Payments
         description: >-
-          <ul><li>Fees must be paid at or before the date specified in your payment plan</li>
+          <ul><li>Fees must be paid at or before the date specified in your payment plan.</li>
           <li>Failure to pay account fees may result in restricted or suspended access
           to your Sendit account.</li></ul>
 ---
