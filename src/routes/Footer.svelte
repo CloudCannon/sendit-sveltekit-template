@@ -11,7 +11,7 @@
 			<div class="row">
 				<div class="col-12 col-lg-4 me-auto order-2 order-lg-1">
 					<div class="footer-logo mt-7 mt-md-0">
-						<a href="/" class="">
+						<a href="/" class="" target="_self">
 							<img src="{footer.logo}" alt="logo" />
 						</a>
 						<p class="">
@@ -35,7 +35,7 @@
 							<ul class="list-unstyled">
 								{#each item.links as link}
 									<li>
-										<a href="{ link.link }">{ link.text }</a>
+										<a href="{ link.link }" target="_self">{ link.text }</a>
 									</li>
 								{/each}
 							</ul>

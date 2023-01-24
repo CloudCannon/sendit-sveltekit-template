@@ -5,7 +5,7 @@
 				<div class="error-content text-center">
 					<img width="300" src="/images/404/error.png" class="" alt="error" />
 					<h3 class="my-5">This page is missing.</h3>
-					<a href="/" class="btn btn-lg btn-primary">Go home</a>
+					<a href="/" target="_self" class="btn btn-lg btn-primary">Go home</a>
 				</div>
 			</div>
 		</div>

@@ -12,7 +12,7 @@
 			<div class="col-lg-12">
 				<div class="error-content text-center">
 					<div class="logo mb-7">
-						<a class="navbar-brand" href="/">
+						<a class="navbar-brand" target="_self" href="/">
 							<img src="/images/logo.svg" alt="" class="" />
 						</a>
 					</div>
@@ -20,7 +20,7 @@
 					<h3 class="my-5">
 						<p>{@html markdownify(description)}</p>
 					</h3>
-					<a href="/" class="btn btn-lg btn-primary"> Try Again </a>
+					<a href="/" target="_self" class="btn btn-lg btn-primary"> Try Again </a>
 				</div>
 			</div>
 		</div>

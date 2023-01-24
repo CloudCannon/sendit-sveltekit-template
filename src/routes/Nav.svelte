@@ -11,7 +11,7 @@
 		id="mainnavigationBar"
 	>
 		<div class="container-fluid">
-			<a class="navbar-brand" href="/">
+			<a class="navbar-brand" target="_self" href="/">
 				<img src="{ nav.logo }" alt="Nav-Logo" />
 			</a>
 			<button
