@@ -76,18 +76,18 @@
 			<div class="col-lg-4 col-md-6">
 				<article class="blog-post">
 					<div class="blog-post-thumb">
-					 <a href="{ post.url }">
+					 <a href="{ post.url }" target="_self">
 						<img src="{ post.data.thumbImg.image }" alt="{ post.data.thumbImg.image_alt }" />
 					 </a>
 					</div>
 					<div class="blog-post-content">
 					 <div class="blog-post-tag">
 						{#each firstTwoTags as tag}
-							<a href="/tags/{tag}/">{tag}</a>
+							<a href="/tags/{tag}/" target="_self">{tag}</a>
 						{/each}
 					 </div>
 					 <div class="blog-post-title">
-						<a href="{ post.url }">{ post.data.title }</a>
+						<a href="{ post.url }" target="_self">{ post.data.title }</a>
 					 </div>
 					</div>
 				</article>
