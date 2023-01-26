@@ -24,7 +24,7 @@ PROJECT:	JACKCREATIVE
 19. Contact Form Page Styles
 20. Counter Up Section Styles
 21.Services Section Styles
-22.Sing-up Section Styles
+22.Sign-up Section Styles
 23.TeamSection Styles
 
 
@@ -46,6 +46,7 @@ PROJECT:	JACKCREATIVE
 @import "components/gallery";
 @import "components/works";
 @import "components/pricing";
+@import "components/privacy";
 @import "components/cta";
 @import "components/footer";
 @import "components/blog";
@@ -53,5 +54,5 @@ PROJECT:	JACKCREATIVE
 @import "components/video";
 @import "components/faq";
 @import "components/contact-form";
-@import "components/sing-up";
+@import "components/sign-up";
 @import "components/counter-up";
