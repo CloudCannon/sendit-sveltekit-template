@@ -1,6 +1,6 @@
 # Sendit
 
-Sendit is a polished, marketing website template for Eleventy. Browse through a [live demo](https://pleasant-worm.cloudvent.net/).
+Sendit is a polished, marketing website template for SvelteKit. Browse through a [live demo](https://pleasant-worm.cloudvent.net/).
 
 ![Sendit template screenshot](/static/images/_screenshot.png)
 
