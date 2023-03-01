@@ -19,7 +19,7 @@
 								<div class="card">
 									<h3 class="sub-title">{item.heading}</h3>
 									<div class="card-body">
-										<div class="card-text">{item.description}</div>
+										<div class="card-text">{@html item.description}</div>
 									</div>
 								</div>
 							</div>

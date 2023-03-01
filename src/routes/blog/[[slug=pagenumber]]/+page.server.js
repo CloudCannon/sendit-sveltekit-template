@@ -12,10 +12,9 @@ export async function load({ params }) {
 	}
 	page = page || 1;
 
-	const filename = 'blog';
+	const filename = 'pages/blog';
 	const res = await get(filename);
 	const pageDetails = res.data;
-
 
 	const filer = new Filer({
 		path: 'content'
