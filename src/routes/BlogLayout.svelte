@@ -35,7 +35,7 @@
 				<div class="col-lg-4 col-md-6">
 					<article class="blog-post">
 						<div class="blog-post-thumb">
-							<a href="{`/blog/${post.slug}`}" target="_self">
+							<a href="{`/blog/${post.slug}/`}" target="_self">
 								<img src="{ post.data.thumbImg.image }" alt="{ post.data.thumbImg.image_alt }" loading="lazy" />
 							</a>
 						</div>
@@ -46,7 +46,7 @@
 								{/each}
 							</div>
 							<div class="blog-post-title">
-								<a href="{`/blog/${post.slug}`}" class="" target="_self">{post.data.title}</a>
+								<a href="{`/blog/${post.slug}/`}" class="" target="_self">{post.data.title}</a>
 							</div>
 						</div>
 					</article>

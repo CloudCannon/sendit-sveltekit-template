@@ -7,7 +7,7 @@
 		<ul class="pagination">
 			{#if pagination.prevPage}
 				<li class="page-item">
-					<a class="page-link btn btn-secondary" href="{`/${pagination.urlPrefix}/${pagination.prevPage}`}" target="_self">
+					<a class="page-link btn btn-secondary" href="{`/${pagination.urlPrefix}/${pagination.prevPage}/`}" target="_self">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="20.657"
@@ -37,14 +37,14 @@
 						target="_self"
 						class="page-link btn btn-secondary"
 						class:active="{index === pagination.currentPage }"
-						href="{`/${pagination.urlPrefix}/${index}`}"
+						href="{`/${pagination.urlPrefix}/${index}/`}"
 						>{index}
 					</a>
 				</li>
 			{/each}
 			{#if pagination.nextPage}
 				<li class="page-item">
-					<a class="page-link btn btn-secondary" href="{`/${pagination.urlPrefix}/${pagination.nextPage}`}" target="_self">
+					<a class="page-link btn btn-secondary" href="{`/${pagination.urlPrefix}/${pagination.nextPage}/`}" target="_self">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="20.657"

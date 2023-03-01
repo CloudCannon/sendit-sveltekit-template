@@ -1,5 +1,5 @@
 {
-	"BaseURL": "http://example.org",
+	"site_domain": "https://example.org",
 	"site_title": "Sendit",
 	"favicon_icon": "/images/favicon.ico",
 	"favicon_image": "/images/favicon.png",
