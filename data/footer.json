@@ -51,10 +51,6 @@
 			{
 				"link": "/blog/",
 				"text": "Blog"
-			},
-			{
-				"link": "/sitemap.xml",
-				"text": "Sitemap"
 			}
 		]
 		},

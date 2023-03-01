@@ -1,4 +1,5 @@
 import Filer from '@cloudcannon/filer';
+import { site_domain } from '@data/site.json';
 
 export const prerender = true;
 
@@ -21,8 +22,8 @@ export async function GET() {
 			xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
 			xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
 		>
-		${pages.map((page) => `<url><loc>/${page.slug}/</loc></url>`).join('\n		')}
-		${posts.map((post) => `<url><loc>/blog/${post.slug}/</loc></url>`).join('\n		')}
+		${pages.map((page) => `<url><loc>${site_domain}/${page.slug}/</loc></url>`).join('\n		')}
+		${posts.map((post) => `<url><loc>${site_domain}/blog/${post.slug}/</loc></url>`).join('\n		')}
 		</urlset>`.trim(),
 		{
 			headers: {

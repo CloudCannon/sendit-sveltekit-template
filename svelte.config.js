@@ -6,6 +6,11 @@ const config = {
 		adapter: adapter(),
 		prerender: {
 			handleHttpError: 'warn',
+			entries: [
+				'*',
+				'/sitemap/',
+				'/sitemap.xml',
+			]
 		},
 	},
 	preprocess: preprocess({
