@@ -5,7 +5,7 @@ collections_config:
     url: '/[slug]'
     output: true
     schemas:
-      page:
+      default:
         path: src/lib/schemas/page.md
     _enabled_editors:
       - visual
