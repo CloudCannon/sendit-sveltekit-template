@@ -1,6 +1,6 @@
 collections_config:
   pages:
-    path: content
+    path: content/pages
     filter: strict
     url: '/[slug]'
     output: true
@@ -77,4 +77,3 @@ _inputs:
     hidden: true
   eleventyExcludeFromCollections:
     hidden: true
-
