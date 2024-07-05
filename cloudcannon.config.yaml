@@ -66,12 +66,6 @@ _inputs:
     comment: Defaults to the pages url
   featured_image:
     comment: Defaults to the image set in the Site SEO data file
-  featured_image.image:
-    type: image
-    options:
-      width: 1296
-      height: 710
-      resize_style: crop
   thumb_image.image:
     type: image
     options:
